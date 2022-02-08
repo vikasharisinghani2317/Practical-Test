@@ -26,7 +26,11 @@ class LoginVC: UIViewController {
     //MARK: View Controller Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationController?.navigationItem.hidesBackButton = true
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationItem.hidesBackButton = true
     }
 }
 
@@ -57,16 +61,11 @@ extension LoginVC{
             return
         }
         
-        //Just a static check for if credentials available or not 
-        if strEmail != userName || strPassword != password{
-            self.showAlert(message: "Please Enter Valid Credentials")
-            return
-        }
-        
         UserDefaults.standard.set("true", forKey: "isLoggedIn")
-        
+        UserDefaults.standard.set(strEmail, forKey: "email")
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let VC = storyboard.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
+        let VC = storyboard.instantiateViewController(withIdentifier: "TabBarvc") as! TabBarvc
+        VC.tabBarController?.navigationItem.hidesBackButton = true
         self.navigationController?.pushViewController(VC, animated: true)
     }
     

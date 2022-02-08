@@ -11,11 +11,13 @@ class HomeVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.tabBarController?.navigationItem.hidesBackButton = true
         // Do any additional setup after loading the view.
     }
     
-
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.navigationItem.hidesBackButton = true
+    }
     /*
     // MARK: - Navigation
 

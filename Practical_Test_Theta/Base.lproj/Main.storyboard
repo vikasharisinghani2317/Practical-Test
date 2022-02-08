@@ -33,17 +33,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XiU-tL-3uL">
-                                <rect key="frame" x="20" y="94" width="335" height="50"/>
+                                <rect key="frame" x="20" y="64" width="335" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eog-Ke-lTH">
-                                <rect key="frame" x="20" y="164" width="335" height="50"/>
+                                <rect key="frame" x="20" y="134" width="335" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HQY-Ju-r0x">
-                                <rect key="frame" x="20" y="234" width="335" height="50"/>
+                                <rect key="frame" x="20" y="204" width="335" height="50"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Login"/>
                                 <connections>
@@ -58,7 +58,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XiU-tL-3uL" secondAttribute="trailing" constant="20" id="41d-xp-BBm"/>
                             <constraint firstItem="HQY-Ju-r0x" firstAttribute="centerX" secondItem="eog-Ke-lTH" secondAttribute="centerX" id="55h-Wf-JbF"/>
                             <constraint firstItem="eog-Ke-lTH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="7xi-RB-Orl"/>
-                            <constraint firstItem="XiU-tL-3uL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="CyM-Ev-7hs"/>
+                            <constraint firstItem="XiU-tL-3uL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="CyM-Ev-7hs"/>
                             <constraint firstItem="XiU-tL-3uL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="MQE-5N-VmX"/>
                             <constraint firstItem="XiU-tL-3uL" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.075" id="OPL-gO-AP4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HQY-Ju-r0x" secondAttribute="trailing" constant="20" id="aHN-na-QtV"/>
@@ -88,12 +88,41 @@
                     <view key="view" contentMode="scaleToFill" id="a42-YR-aKQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yrm-i5-Q9d">
+                                <rect key="frame" x="20" y="50" width="335" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6p-4T-fdW">
+                                <rect key="frame" x="20" y="90.5" width="335" height="50"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Logout"/>
+                                <connections>
+                                    <action selector="didTapLogout:" destination="vgD-cn-1kL" eventType="touchUpInside" id="HLS-0y-F9w"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="OGW-F3-pF2"/>
                         <color key="backgroundColor" systemColor="systemBrownColor"/>
+                        <constraints>
+                            <constraint firstItem="OGW-F3-pF2" firstAttribute="trailing" secondItem="K6p-4T-fdW" secondAttribute="trailing" constant="20" id="5k1-Ry-7To"/>
+                            <constraint firstItem="OGW-F3-pF2" firstAttribute="trailing" secondItem="yrm-i5-Q9d" secondAttribute="trailing" constant="20" id="Dt3-0V-YhK"/>
+                            <constraint firstItem="yrm-i5-Q9d" firstAttribute="top" secondItem="OGW-F3-pF2" secondAttribute="top" constant="50" id="S3a-hW-h4v"/>
+                            <constraint firstItem="K6p-4T-fdW" firstAttribute="top" secondItem="yrm-i5-Q9d" secondAttribute="bottom" constant="20" id="Sje-T5-gQm"/>
+                            <constraint firstItem="K6p-4T-fdW" firstAttribute="leading" secondItem="OGW-F3-pF2" secondAttribute="leading" constant="20" id="XdD-bW-aRw"/>
+                            <constraint firstItem="yrm-i5-Q9d" firstAttribute="leading" secondItem="OGW-F3-pF2" secondAttribute="leading" constant="20" id="laz-Ia-jLJ"/>
+                            <constraint firstItem="K6p-4T-fdW" firstAttribute="height" secondItem="a42-YR-aKQ" secondAttribute="height" multiplier="0.075" id="njz-le-OQH"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="brain.head.profile" catalog="system" id="g1z-2O-0zO"/>
                     <navigationItem key="navigationItem" title="Profile" id="6Td-8m-lhI"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="btnLogout" destination="K6p-4T-fdW" id="Bvm-mG-lZa"/>
+                        <outlet property="lblEmail" destination="yrm-i5-Q9d" id="Ryz-9h-sR0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BVL-Ei-tJ0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -125,7 +154,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="homekit" catalog="system" id="nAq-52-1zi"/>
                     <navigationItem key="navigationItem" title="Home" id="j8p-YT-rJ4"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wCX-wS-JWZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

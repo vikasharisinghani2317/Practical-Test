@@ -25,12 +25,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window = UIWindow(frame: UIScreen.main.bounds)
             self.window?.rootViewController = initialViewControlleripad
             self.window?.makeKeyAndVisible()
-        }else{
-            let initialViewControlleripad : UIViewController = storyboard.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-            self.window = UIWindow(frame: UIScreen.main.bounds)
-            self.window?.rootViewController = initialViewControlleripad
-            self.window?.makeKeyAndVisible()
-        }
+        }//else{
+//            let initialViewControlleripad : UIViewController = storyboard.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
+//            self.window = UIWindow(frame: UIScreen.main.bounds)
+//            self.window?.rootViewController = initialViewControlleripad
+//            self.window?.makeKeyAndVisible()
+//        }
         return true
     }
 }

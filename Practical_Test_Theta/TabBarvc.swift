@@ -17,6 +17,14 @@ class TabBarvc: UITabBarController {
     
 
     private func setVC() {
+        tabBar.items?.forEach { tabBarItem in
+            if #available(iOS 13.0, *) {
+
+            } else {
+                tabBarItem.imageInsets = UIEdgeInsets(top: 5, left: 0, bottom: -5, right: 0)
+            }
+        }
+
         let homeVC = UINavigationController(rootViewController: UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeVC"))
         let profileVC = UINavigationController(rootViewController: UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProfileVC"))
         viewControllers = [homeVC, profileVC]
