@@ -12,6 +12,9 @@ class TabBarvc: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setVC()
+        self.tabBar.isTranslucent = false
+        UITabBar.appearance().barTintColor = UIColor.systemBrown
+        
         // Do any additional setup after loading the view.
     }
     
